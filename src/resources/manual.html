@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<h1>Nápověda</h1>
+	<h2>Editor</h2>
+	Editor slouží zároveň jako hlavní část programu, kde je umístěno menu.
+	<ul>
+		<li><strong>Vytváření, načítání a ukládání grafu</strong> - možnosti se nacházejí v menu pod nabídkou <em>Soubor</em>. 
+		    Graf se vždy ukládá i načítá jako XML soubor.</li>
+		<li>
+		  <strong>Práce s grafem</strong>
+		  <ul>
+			  <li>V grafu je možné přibližovat a oddalovat použitím kolečka u myši a současným držením klávesy Ctrl.</li>
+			  <li>U vrcholů se mění pozice a velikost pomocí myši.</li>
+			  <li>Vkládání nového vrcholu se děje pomocí kombinaci klávesy levý alt a klikem pravého tlačítka myši. 
+				  Jméno každého vrcholu musí být v grafu unikátní a neprázdné.</li>
+			  <li>Hrana se přidává tažením myši od středu jednoho vrcholu do druhého vrcholu. Editor nepovoluje volné hrany nebo hrany nespojující dva vrcholy.</li>
+			  <li>Vymazání vrcholu nebo hrany je možné pomocí klávesy Delete.</li>
+			  <li>Uzel je možné pro účely následující simulace označit jako počáteční z nabídky <em>Editace</em>. 
+			      Takový uzel je zobrazen žlutě s červeným obrysem. </li>
+		      <li>Je možné používat standardní klávesové zkratky pro kopírování a vložení.</li>
+		  </ul>  
+		</li>
+		<li>
+		  <strong>Nastavení stylu</strong>
+		  <ul>
+			  <li>Styl se nastavuje v nabídce <em>Editace &#8594; Nastavit Styl</em></li>
+			  <li>Z nabídky se vybírá styl, který se má změnit, a poté se textově upraví.
+				  Standardně je možné zadávat hodnoty jako barvu, tloušťku čar a také tvar.
+				  Všechny možnosti pro styly jsou k nalezení ve zdrojovém souboru knihovny mxConstants.java.</li>
+			  <li>Při zadávání změn je zobrazen náhled, kde jsou dva vrcholy a jedna hrana.
+				  Vždy se při změně stylu mění pouze hrana a levý vrchol.
+			      Pravý vrchol je nastaven na standardní zobrazení uzlu pro tento graf.</li>
+		  </ul>
+		</li>
+		<li>
+		  <strong>Změna motivu</strong>
+		  <ul>
+			  <li>Je možné z nabídky <em>Okno</em> změnit aktuální motiv pro uživatelské rozhraní. 
+				  Standardní funkčnost je testována na operačním systému MS Windows.
+				  Ostatní motivy slouží jako možnost pro uživatele, pokud by se na jeho konfiguraci zobrazovaly lépe.
+			  </li>
+		  </ul>  
+		</li>
+	</ul>
+	
+	<h2>Simulátor</h2>
+	Simulátory jednotlivých algoritmů se spouštějí z hlavního menu pod nabídkou <em>Simulace</em>.
+	Jako vstupní graf simulátor použije graf načtený v editoru a spustí simulaci ve vlastním okně.	
+	<ul>
+	  <li>
+		<strong>Úpravy a interakce u grafu</strong>
+	    <ul>
+		  <li>Úpravy grafu, přibližování a oddalování jsou stejné jako v případě editoru grafů.
+			  V simulační části jsou ovšem vypnuty možnosti pro změnu struktury grafu. 
+			  Provedené úpravy platí pouze pro aktuální běh simulátoru a nedají se uložit.</li>
+		  <li>V interaktivní části se vrcholy a hrany vybírají kliknutím myši na příslušné místo v grafu.
+			  Zadávání hodnot se děje pomocí dvojkliku myši.
+			  Speciální případ je u algoritmu <strong>DFS</strong>, kde se typ hrany vybírá z kontextového menu přímo u hrany.</li>
+		</ul>
+	  </li>
+	  <li>
+		<strong>Panel proměnných</strong>
+	    <ul>
+			<li>Tažením myši v levé části přejde panel do dialogu. Zavřením dialogu se vrátí do původní polohy.</li>
+		</ul>
+	  </li>
+	  <li>
+		<strong>Panel pseudokódu</strong>
+	    <ul>
+        <li>Pravým tlačítkem myši se vyvolá kontextové menu</li>  
+			  <li>Body pro pozastavení se zadávají dvojklikem myši do oblasti čísla řádku.</li>
+			  <li>Centrování grafu a pseudokódu lze vypnout nebo zapnout z menu.</li>
+			  <li>Interaktivní mód se zapíná z menu. Je možné opakované vypnutí a zapnutí v průběhu simulace.</li>
+			  <li>Možnost vrátit panely proměnných zpátky do jejich původní polohy je taktéž přítomna v kontextovém menu panelu.</li>
+		  </ul>
+	  </li>
+	  <li>
+		<strong>Ovládání</strong>
+	    <ul>
+		  <li>K dispozici jsou tlačítka: krok dozadu, restart, běh podle rychlosti a krok dopředu.</li>
+		  <li>Pod tlačítky je posuvník rychlosti, kterým lze nastavit prodlevu mezi kroky simulátoru.</li>
+	    </ul>
+	  </li>
+	</ul>	
+  </body>
+</html>
